@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+</head>
+<body>
+{{/* is Comment */}}
+{{if .Name}}
+    <h1>Hallo {{.Name}}</h1>
+    {{with .Address}}
+        <h3>Address Street: {{.Street}}</h3>
+        <h3>Address City : {{.City}}</h3>
+    {{else}}
+        <h3>You Dont have address</h3>
+    {{end}}
+{{else}}
+    <h1>Hallo User</h1>
+{{end}}
+</body>
+</html>
